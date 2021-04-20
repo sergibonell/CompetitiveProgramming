@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-
+//RUNTIME ERROR
 public class E537 {
     public static void main(String[] args) {
         Scanner lector = new Scanner(System.in);
@@ -19,12 +19,10 @@ public class E537 {
                     }
                 }
 
-                for (int i = 0; i < camins.size(); i++) {
-                    for (int j = 0; j < nPunts; j++) {
+                for (int i = 0; i < camins.size(); i++)
+                    for (int j = 0; j < nPunts; j++)
                         if (matriu[i][j] && !camins.contains(j + 1))
                             camins.add(j + 1);
-                    }
-                }
             }
 
             if(nPunts == camins.size())
