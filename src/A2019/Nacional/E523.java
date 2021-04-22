@@ -1,3 +1,5 @@
+package A2019.Nacional;
+
 import java.util.Scanner;
 
 public class E523 {

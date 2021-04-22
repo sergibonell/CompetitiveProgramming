@@ -1,3 +1,5 @@
+package A2020.Calentamiento;
+
 import java.util.Scanner;
 
 public class E536 {
@@ -19,11 +21,11 @@ public class E536 {
 }
 
 class Terreno{
-    int tamaño, abono, agua, distancia;
+    int tamano, abono, agua, distancia;
     String nombre;
 
-    public Terreno(int tamaño, int abono, int agua, int distancia, String nombre) {
-        this.tamaño = tamaño;
+    public Terreno(int tamano, int abono, int agua, int distancia, String nombre) {
+        this.tamano = tamano;
         this.abono = abono;
         this.agua = agua;
         this.distancia = distancia;
@@ -35,9 +37,6 @@ class Terreno{
     }
 
     public boolean isBetter(Terreno t){
-        if(tamaño>t.tamaño || (tamaño == t.tamaño && agua<t.agua) || (tamaño == t.tamaño && agua == t.agua && distancia<t.distancia) || (tamaño == t.tamaño && agua == t.agua && distancia==t.distancia && abono<t.abono))
-            return true;
-        else
-            return false;
+        return tamano > t.tamano || (tamano == t.tamano && agua < t.agua) || (tamano == t.tamano && agua == t.agua && distancia < t.distancia) || (tamano == t.tamano && agua == t.agua && distancia == t.distancia && abono < t.abono);
     }
 }
