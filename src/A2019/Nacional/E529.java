@@ -18,15 +18,12 @@ public class E529 {
                     if (++contador > max)
                         max = contador;
                 } else {
-                    if (--contador < min)
+                    if (--contador < 0 && contador < min)
                         min = contador;
                 }
             }
 
-            if(min < 0)
-                System.out.println(max - min);
-            else
-                System.out.println(max);
+            System.out.println(max - min);
         }
     }
 }
