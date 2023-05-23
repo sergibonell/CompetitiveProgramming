@@ -2,24 +2,26 @@ package A2019.Nacional;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Random;
 import java.util.Scanner;
 
 //WRONG ANSWER
 public class E524 {
     public static void main(String[] args) {
+        Random random = new Random();
         Scanner lector = new Scanner(System.in);
         int nProds = lector.nextInt();
         while (nProds != 0){
-            int suma = 0;
+            long suma = 0;
             int minA = lector.nextInt();
             int minB = lector.nextInt();
             ArrayList<Integer> llistaA = new ArrayList<>();
             for(int i = 0; i<nProds; i++)
-                llistaA.add(lector.nextInt());
+                llistaA.add(random.nextInt(1000));
             Collections.sort(llistaA);
             ArrayList<Integer> llistaB = new ArrayList<>();
             for(int i = 0; i<nProds; i++)
-                llistaB.add(lector.nextInt());
+                llistaB.add(random.nextInt(1000));
             Collections.sort(llistaB);
 
             for(int i = 0; i<minA; i++)
